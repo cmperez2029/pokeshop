@@ -8,34 +8,34 @@ body {
 }
 
 header {
-  font-family: "Ranchers", cursive;
   background-color: #EE1515; 
   border-bottom: 8px solid #3B4CCA; 
-  padding: 20px;
+  padding: 0;
   text-align: center;
 }
 
-header h1 {
-  color: #FFCB05;
-  text-shadow: 3px 3px 0px #3B4CCA; 
-  font-size: 3rem;
+.header-logo {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 10px;
+  background-color: rgba(0,0,0,0.2);
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: 15px;
+  margin: 0 15px;
   font-size: 1.2rem;
 }
 
 nav a:hover {
   color: #FFCB05;
-  text-decoration: underline;
-}
-
-.greet h1 {
-  color: #222;
-  margin-bottom: 30px;
 }
 
 .cloud {
@@ -56,7 +56,6 @@ nav a:hover {
 
 #wrapper {
   margin-left: 50px;
-  position: relative;
 }
 
 .product {
@@ -74,16 +73,6 @@ nav a:hover {
   transform: scale(1.1) rotate(2deg);
 }
 
-.prod-name {
-  font-weight: bold;
-  color: #3B4CCA;
-}
-
-.prod-price {
-  color: #28a745;
-  font-weight: bold;
-}
-
 .btn-danger {
   background-color: #EE1515;
   border: 3px solid #3B4CCA;
@@ -97,7 +86,6 @@ nav a:hover {
   border-radius: 20px;
   padding: 20px;
   margin-right: 3cm;
-  min-width: 300px;
 }
 
 table {
@@ -111,10 +99,4 @@ table {
 th {
   background-color: #FFCB05;
   color: #3B4CCA;
-  padding: 10px;
-}
-
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
 }
