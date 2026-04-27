@@ -3,6 +3,7 @@
 body {
     background: url('Background.png') no-repeat center center fixed !important;
     background-size: cover !important;
+    margin: 0;
 }
 
 .main-header {
@@ -27,6 +28,7 @@ body {
     padding: 5px 15px;
     font-family: 'Ranchers';
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .product-card {
@@ -38,6 +40,13 @@ body {
 }
 
 .product-card img { width: 100px; height: 100px; object-fit: contain; }
+
+.product-card button {
+    background: #EE1515;
+    color: #fff;
+    border: 1px solid #000;
+    width: 100%;
+}
 
 .cart-container {
     background: rgba(255, 255, 255, 0.9);
