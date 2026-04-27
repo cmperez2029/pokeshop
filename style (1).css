@@ -1,65 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
+  background-color: #87CEEB; 
+  font-family: 'Fredoka One', cursive;
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
+
 header {
-  font-family: "Ranchers", static;
-  background-color:#B32624;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  font-family: "Ranchers", cursive;
+  background-color: #EE1515; 
+  border-bottom: 8px solid #3B4CCA; 
+  padding: 20px;
+  text-align: center;
 }
-.greet{
-  margin-top:30px;
-  text-align:center;
-}
-#wrapper {
-  margin-left:50px;
-}
-h2 {
-  margin-top: 50px;
-  margin-bottom:20px;
-}
+
 header h1 {
-  color: white;
-  margin: 0;
+  color: #FFCB05;
+  text-shadow: 3px 3px 0px #3B4CCA; 
+  font-size: 3rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 15px;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
+  color: #FFCB05;
   text-decoration: underline;
 }
 
-.product {
-  border: 1px solid black;
-  padding: 10px;
-  width: 140px;
-  text-align: center;
+.greet h1 {
+  color: #222;
+  margin-bottom: 30px;
 }
 
-.product p {
-  margin: 5px 0;
+.cloud {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: white;
+  border-radius: 50px;
+  opacity: 0.8;
+  z-index: -1;
+  animation: moveClouds 20s linear infinite;
 }
+
+@keyframes moveClouds {
+  from { left: -150px; }
+  to { left: 100vw; }
+}
+
+#wrapper {
+  margin-left: 50px;
+  position: relative;
+}
+
+.product {
+  background: white;
+  border: 4px solid #3B4CCA;
+  border-radius: 20px;
+  padding: 15px;
+  width: 160px;
+  text-align: center;
+  transition: transform 0.2s;
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+.product:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.prod-name {
+  font-weight: bold;
+  color: #3B4CCA;
+}
+
+.prod-price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.btn-danger {
+  background-color: #EE1515;
+  border: 3px solid #3B4CCA;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
 #cart-section {
-  margin-right:3cm;
+  background: white;
+  border: 6px solid #3B4CCA;
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 3cm;
+  min-width: 300px;
 }
-#cart-list li {
-  margin-bottom: 5px;
-}
-section {
-  margin-left:20px;
-}
+
 table {
-  border-collapse: collapse;
+  background: white;
+  border: 4px solid #3B4CCA;
+  border-radius: 15px;
+  overflow: hidden;
   width: 100%;
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+th {
+  background-color: #FFCB05;
+  color: #3B4CCA;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
 }
