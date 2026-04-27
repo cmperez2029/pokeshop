@@ -1,102 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
 body {
-  background-color: #87CEEB; 
-  font-family: 'Fredoka One', cursive;
-  margin: 0;
-  overflow-x: hidden;
+    background-color: #78C850;
+    background-image: linear-gradient(to bottom, #87CEEB, #E0F7FA); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 header {
-  background-color: #EE1515; 
-  border-bottom: 8px solid #3B4CCA; 
-  padding: 0;
-  text-align: center;
+    background-color: #EE1515; 
+    padding: 20px;
+    border-bottom: 8px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-logo {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-nav {
-  padding: 10px;
-  background-color: rgba(0,0,0,0.2);
+    height: 70px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.2rem;
+    font-family: 'Ranchers', cursive;
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-left: 25px;
+    text-shadow: 2px 2px 0px #333;
 }
 
 nav a:hover {
-  color: #FFCB05;
+    color: #FFCB05; /* Pokemon Yellow */
 }
 
-.cloud {
-  position: absolute;
-  width: 150px;
-  height: 80px;
-  background: white;
-  border-radius: 50px;
-  opacity: 0.8;
-  z-index: -1;
-  animation: moveClouds 20s linear infinite;
+.greet {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-@keyframes moveClouds {
-  from { left: -150px; }
-  to { left: 100vw; }
+.greet h1 {
+    font-family: 'Ranchers', cursive;
+    font-size: 4rem;
+    color: #3C5AA6; /* Pokemon Blue */
+    text-shadow: 4px 4px 0px #FFCB05, 6px 6px 0px #333;
+}
+
+h2 {
+    font-family: 'Ranchers', cursive;
+    color: #fff;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 #wrapper {
-  margin-left: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
 .product {
-  background: white;
-  border: 4px solid #3B4CCA;
-  border-radius: 20px;
-  padding: 15px;
-  width: 160px;
-  text-align: center;
-  transition: transform 0.2s;
-  box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+    background: white;
+    border: 4px solid #333;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 180px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .product:hover {
-  transform: scale(1.1) rotate(2deg);
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
 }
 
-.btn-danger {
-  background-color: #EE1515;
-  border: 3px solid #3B4CCA;
-  font-weight: bold;
-  border-radius: 10px;
+.prod-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.prod-price {
+    color: #2E7D32;
+    font-weight: bold;
 }
 
 #cart-section {
-  background: white;
-  border: 6px solid #3B4CCA;
-  border-radius: 20px;
-  padding: 20px;
-  margin-right: 3cm;
+    background: white;
+    border: 5px solid #333 !important;
+    border-radius: 20px;
+    min-width: 350px;
+    height: fit-content;
+    position: sticky;
+    top: 130px;
 }
 
-table {
-  background: white;
-  border: 4px solid #3B4CCA;
-  border-radius: 15px;
-  overflow: hidden;
-  width: 100%;
+#cart-section h2, #cart-section h3 {
+    font-family: 'Ranchers', cursive;
+    background: none;
+    color: #EE1515;
+    text-align: center;
 }
 
-th {
-  background-color: #FFCB05;
-  color: #3B4CCA;
+/* Cloud Animation */
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    border-radius: 200px;
+    opacity: 0.8;
+    z-index: -1;
+    animation: moveClouds linear infinite;
+}
+
+.cloud:after, .cloud:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 80px;
+    top: -40px;
+    left: 10px;
+    border-radius: 100px;
+}
+
+.cloud:after {
+    width: 120px;
+    height: 120px;
+    top: -70px;
+    left: 70px;
+}
+
+@keyframes moveClouds {
+    from { left: -250px; }
+    to { left: 100%; }
 }
