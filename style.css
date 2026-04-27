@@ -33,8 +33,8 @@ body {
 .side-cart { background: rgba(255, 255, 255, 0.95); border: 4px solid black; border-radius: 20px; position: sticky; top: 20px; }
 .font-ranch { font-family: 'Ranchers'; }
 
-/* About Page Specific */
-.project-title { font-weight: bold; font-size: 3.5rem; }
+/* About Page Styling */
+.project-title { font-weight: bold; font-size: 3.5rem; text-align: left; }
 .owner-row { margin-top: 80px; }
 .owner-name { font-size: 2rem; font-weight: bold; }
 .role-text { font-size: 1.1rem; }
