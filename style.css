@@ -58,3 +58,26 @@ nav a {
     font-weight: bold;
     font-size: 12px;
 }
+img {
+    max-width: 250px !important;
+    height: auto !important;
+}
+
+.header-img {
+    max-width: 300px !important;
+    height: 60px !important;
+}
+
+body {
+    background-image: url('background.png') !important;
+    background-size: contain !important;
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+}
+
+.container, .shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
