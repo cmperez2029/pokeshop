@@ -11,17 +11,24 @@
 </head>
 <body>
 
-  <div class="bottom-poke-deco">
-    <div class="bottom-poke-inner"></div>
-  </div>
-
-  <header>
-    <div class="header-container">
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="left-nav">
+        <a href="index.html" class="nav-btn">HOME</a>
+        <a href="about.html" class="nav-btn">ABOUT THE COMPANY</a>
+      </div>
       <img src="header.png" alt="PokeShop" class="header-logo">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About the Company</a>
-      </nav>
+      <div class="right-nav">
+        <a href="#" class="nav-btn">TRAINER PROFILE</a>
+        <a href="#" class="nav-btn">MAP</a>
+      </div>
+    </div>
+    <div class="sub-bar">
+      <a href="#">POKEMON</a>
+      <a href="#">ITEMS</a>
+      <a href="#">GEAR</a>
+      <a href="#">CART</a>
+      <a href="#">BATTLE</a>
     </div>
   </header>
 
@@ -172,11 +179,11 @@
     </div>
 
     <div id="cart-section" class="border p-3">
-      <h2>Shopping Cart</h2>
+      <h2 class="cart-title">Shopping Cart</h2>
       <ul id="cart-list" class="ps-3"></ul>
       <p><strong>Total: ₱<span id="cart-total">0.00</span></strong></p>
       <hr>
-      <h3>Checkout</h3>
+      <h3 class="checkout-title">Checkout</h3>
       <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
         <label for="cust_name">Name:</label><br>
         <input type="text" id="cust_name" name="cust_name" class="form-control mb-2" required><br>
