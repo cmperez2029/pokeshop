@@ -1,36 +1,28 @@
-let cart = [];
+let cartArr = [];
 
-function addToCart(name, price) {
-    cart.push({ prod_name: name, prod_price: price });
-    updateCartUI();
+function addToCart(pName, pPrice) {
+    cartArr.push({ prod_name: pName, prod_price: pPrice });
+    renderCart();
 }
 
-function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCartUI();
+function remove(idx) {
+    cartArr.splice(idx, 1);
+    renderCart();
 }
 
-function updateCartUI() {
-    const display = document.getElementById("cart-display");
-    const totalDisplay = document.getElementById("total-price");
+function renderCart() {
+    const list = document.getElementById("cart-items");
+    const totalOut = document.getElementById("total-val");
     const hiddenInput = document.getElementById("cust_order");
-
-    display.innerHTML = "";
-    let total = 0;
-
-    if (cart.length === 0) {
-        display.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
-    } else {
-        cart.forEach((item, index) => {
-            total += item.prod_price;
-            display.innerHTML += `
-                <div class="d-flex justify-content-between align-items-center mb-2 border-bottom pb-1">
-                    <small>${item.prod_name} - ₱${item.prod_price.toLocaleString()}</small>
-                    <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart(${index})">×</button>
-                </div>`;
-        });
-    }
-
-    totalDisplay.innerText = "₱" + total.toLocaleString();
-    hiddenInput.value = JSON.stringify(cart);
+    
+    list.innerHTML = "";
+    let sum = 0;
+    
+    cartArr.forEach((item, i) => {
+        sum += item.prod_price;
+        list.innerHTML += `<div class="d-flex justify-content-between"><span>${item.prod_name}</span><button type="button" class="btn btn-sm text-danger" onclick="remove(${i})">x</button></div>`;
+    });
+    
+    totalOut.innerText = "₱" + sum.toLocaleString();
+    hiddenInput.value = JSON.stringify(cartArr);
 }
