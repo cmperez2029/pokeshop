@@ -1,31 +1,32 @@
-let cartArr = [];
+let cart = [];
+const cartCount = document.getElementById('cart-count');
+const totalPriceElement = document.getElementById('total-price');
+const orderInput = document.getElementById('cust_order_input');
 
-function addToCart(pName, pPrice) {
-    cartArr.push({ prod_name: pName, prod_price: pPrice });
-    renderCart();
-}
-
-function remove(idx) {
-    cartArr.splice(idx, 1);
-    renderCart();
-}
-
-function renderCart() {
-    const list = document.getElementById("cart-items");
-    const totalOut = document.getElementById("total-val");
-    const hiddenInput = document.getElementById("cust_order");
-    
-    list.innerHTML = "";
-    let sum = 0;
-    
-    cartArr.forEach((item, i) => {
-        sum += item.prod_price;
-        list.innerHTML += `<div class="d-flex justify-content-between border-bottom py-1">
-            <span>${item.prod_name}</span>
-            <button type="button" class="btn btn-sm text-danger" onclick="remove(${i})">x</button>
-        </div>`;
+function updateCart() {
+    let total = 0;
+    cart.forEach(item => {
+        total += item.prod_price;
     });
     
-    totalOut.innerText = "₱" + sum.toLocaleString();
-    hiddenInput.value = JSON.stringify(cartArr);
-} 
+    if(totalPriceElement) totalPriceElement.innerText = "Total: P" + total;
+    cartCount.innerText = cart.length;
+    orderInput.value = JSON.stringify(cart);
+}
+
+function addToCart(name, price) {
+    cart.push({ prod_name: name, prod_price: price });
+    updateCart();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+document.getElementById('order-form').onsubmit = function(e) {
+    if (cart.length === 0) {
+        e.preventDefault();
+        alert("Your cart is empty!");
+    }
+};
