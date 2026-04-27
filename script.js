@@ -5,7 +5,7 @@ function addToCart(name, price) {
   updateCartDisplay();
 }
 
-function removeFromCart(index) {
+function removeFromCart(index) { 
   cart.splice(index, 1);
   updateCartDisplay();
 }
