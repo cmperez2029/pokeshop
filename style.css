@@ -3,109 +3,127 @@
 body {
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    overflow-x: hidden;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.main-header {
-    background-color: #87CEEB;
+header {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
 }
 
-.top-bar {
+.top-header {
+    background-color: #EE1515;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 10px 25px;
+    height: 110px; /* Adjusted size */
+    border-bottom: 5px solid #000;
 }
 
-.nav-btn {
-    background-color: #D33636;
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.poke-btn {
+    background-color: #C64444;
     color: white;
     font-family: 'Ranchers', cursive;
     text-decoration: none;
     padding: 10px 20px;
-    border: 4px solid #333;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    box-shadow: 2px 2px 0 #000;
-    letter-spacing: 1px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    box-shadow: 3px 3px 0px #000;
 }
 
-.nav-btn:hover {
+.poke-btn:hover {
     background-color: #FFCB05;
-    color: #333;
+    color: #000;
 }
 
-.header-logo {
-    height: 70px;
+.main-logo {
+    height: 90px;
 }
 
-.sub-bar {
-    background-color: #A33232;
-    padding: 10px;
+.icon-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    background-color: #FFCB05;
+    border: 3px solid #000;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: bold;
+    box-shadow: 2px 2px 0px #000;
+}
+
+.map-btn {
+    background-color: #D6BD90;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.1rem;
+}
+
+.sub-nav {
+    background-color: #333;
     display: flex;
     justify-content: center;
     gap: 50px;
-    border-top: 5px solid #333;
-    border-bottom: 5px solid #333;
+    padding: 12px;
+    border-bottom: 5px solid #000;
 }
 
-.sub-bar a {
-    font-family: 'Ranchers', cursive;
+.sub-nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 0px #333;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.6rem;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #000;
 }
 
-.sub-bar a:hover {
+.sub-nav a:hover {
     color: #FFCB05;
-}
-
-.greet {
-    text-align: center;
-    padding: 40px 20px;
 }
 
 .greet h1 {
     font-family: 'Ranchers', cursive;
-    font-size: 5rem;
-    color: #FFCB05;
-    text-shadow: 4px 4px 0px #3C5AA6, 6px 6px 0px #333;
-}
-
-h2 {
-    font-family: 'Ranchers', cursive;
-    color: #fff;
-    background: #333;
-    padding: 10px 30px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    font-size: 5.5rem;
+    text-align: center;
+    color: #3C5AA6;
+    text-shadow: 4px 4px 0px #FFCB05, 7px 7px 0px #000;
+    margin: 45px 0;
 }
 
 #wrapper {
     background: transparent;
-    padding: 20px;
-    margin-bottom: 80px;
+}
+
+.type-label {
+    background: #333;
+    color: white;
+    font-family: 'Ranchers', cursive;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 35px;
+    border: 4px solid #000;
 }
 
 .product {
-    background: rgba(255, 255, 255, 0.95);
-    border: 4px solid #333;
+    background: rgba(255, 255, 255, 0.9); /* Made visible and semi-transparent */
+    border: 4px solid #000;
     border-radius: 15px;
+    width: 220px;
     padding: 20px;
     text-align: center;
-    width: 200px;
     transition: transform 0.2s;
 }
 
@@ -113,45 +131,49 @@ h2 {
     transform: translateY(-10px);
 }
 
-.product img {
-    max-width: 120px;
-    height: 120px;
-}
+.product img { width: 130px; height: 130px; }
 
-.prod-name {
+.prod-name { font-family: 'Ranchers', cursive; font-size: 1.6rem; margin: 15px 0 5px; }
+
+.prod-price { color: #2E7D32; font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
+
+.add-btn {
+    background: #EE1515;
+    color: white;
+    border: 3px solid #000;
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px;
     font-family: 'Ranchers', cursive;
-    font-size: 1.5rem;
-    margin-top: 15px;
-}
-
-.prod-price {
-    color: #2E7D32;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
 }
 
 #cart-section {
+    width: 400px;
     background: rgba(255, 255, 255, 0.95);
-    border: 5px solid #333 !important;
+    border: 6px solid #000;
     border-radius: 20px;
-    min-width: 380px;
     height: fit-content;
     position: sticky;
-    top: 200px;
+    top: 180px;
 }
 
-.cart-title {
-    background: none;
+.cart-header, .checkout-header {
     color: #EE1515;
-    text-align: center;
-    font-size: 2.5rem;
-    padding: 0;
-}
-
-.checkout-title {
     font-family: 'Ranchers', cursive;
-    color: #EE1515;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.8rem;
+    padding-top: 20px;
+}
+
+.cart-body { padding: 30px; }
+
+.confirm-btn {
+    background: #EE1515;
+    color: white;
+    border: 4px solid #000;
+    border-radius: 12px;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.6rem;
 }
