@@ -28,4 +28,4 @@ function renderCart() {
     
     totalOut.innerText = "₱" + sum.toLocaleString();
     hiddenInput.value = JSON.stringify(cartArr);
-}
+} 
