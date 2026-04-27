@@ -12,63 +12,41 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: #EE1515;
+    border-bottom: 5px solid #000;
 }
 
 .top-header {
-    background-color: #EE1515;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 25px;
-    height: 110px; /* Adjusted size */
-    border-bottom: 5px solid #000;
+    padding: 10px 30px;
+    height: 120px;
+    background: url('header.png') no-repeat center;
+    background-size: contain;
 }
 
 .header-left, .header-right {
     display: flex;
-    align-items: center;
     gap: 15px;
+    z-index: 2;
 }
 
-.poke-btn {
-    background-color: #C64444;
-    color: white;
-    font-family: 'Ranchers', cursive;
+.top-header a {
+    color: white !important;
     text-decoration: none;
-    padding: 10px 20px;
+    font-family: 'Ranchers', cursive;
+    background-color: #C64444;
+    padding: 8px 15px;
     border: 3px solid #000;
     border-radius: 10px;
-    font-size: 1.3rem;
     box-shadow: 3px 3px 0px #000;
+    font-size: 1.2rem;
 }
 
-.poke-btn:hover {
+.top-header a:hover {
     background-color: #FFCB05;
-    color: #000;
-}
-
-.main-logo {
-    height: 90px;
-}
-
-.icon-btns {
-    display: flex;
-    gap: 10px;
-}
-
-.icon-btn {
-    background-color: #FFCB05;
-    border: 3px solid #000;
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-weight: bold;
-    box-shadow: 2px 2px 0px #000;
-}
-
-.map-btn {
-    background-color: #D6BD90;
-    font-family: 'Ranchers', cursive;
-    font-size: 1.1rem;
+    color: #000 !important;
 }
 
 .sub-nav {
@@ -118,7 +96,7 @@ header {
 }
 
 .product {
-    background: rgba(255, 255, 255, 0.9); /* Made visible and semi-transparent */
+    background: rgba(255, 255, 255, 0.9);
     border: 4px solid #000;
     border-radius: 15px;
     width: 220px;
@@ -176,4 +154,16 @@ header {
     padding: 15px;
     font-family: 'Ranchers', cursive;
     font-size: 1.6rem;
+}
+
+.pokeball-icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: inset 0 -35px 0 0 #EE1515;
 }
