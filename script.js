@@ -1,32 +1,35 @@
 let cart = [];
 
 function addToCart(name, price) {
-    const item = { prod_name: name, prod_price: price };
-    cart.push(item);
-    updateCart();
+    cart.push({ prod_name: name, prod_price: price });
+    updateCartUI();
 }
 
-function removeItem(index) {
+function removeFromCart(index) {
     cart.splice(index, 1);
-    updateCart();
+    updateCartUI();
 }
 
-function updateCart() {
-    const list = document.getElementById("cart-list");
+function updateCartUI() {
+    const display = document.getElementById("cart-display");
     const totalDisplay = document.getElementById("total-price");
     const hiddenInput = document.getElementById("cust_order");
-    
-    list.innerHTML = "";
+
+    display.innerHTML = "";
     let total = 0;
 
-    cart.forEach((item, index) => {
-        total += item.prod_price;
-        list.innerHTML += `
-            <div class="d-flex justify-content-between align-items-center mb-1">
-                <span>${item.prod_name} - ₱${item.prod_price.toLocaleString()}</span>
-                <button class="btn btn-sm text-danger" onclick="removeItem(${index})">Remove</button>
-            </div>`;
-    });
+    if (cart.length === 0) {
+        display.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+    } else {
+        cart.forEach((item, index) => {
+            total += item.prod_price;
+            display.innerHTML += `
+                <div class="d-flex justify-content-between align-items-center mb-2 border-bottom pb-1">
+                    <small>${item.prod_name} - ₱${item.prod_price.toLocaleString()}</small>
+                    <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart(${index})">×</button>
+                </div>`;
+        });
+    }
 
     totalDisplay.innerText = "₱" + total.toLocaleString();
     hiddenInput.value = JSON.stringify(cart);
