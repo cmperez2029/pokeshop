@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PokeShop - Finalize Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="header-left">
+                <a href="index.html" class="poke-btn">HOME</a>
+                <a href="about.html" class="poke-btn">ABOUT THE COMPANY</a>
+            </div>
+            <div class="header-center">
+                <img src="header.png" alt="PokeShop" class="logo-img">
+            </div>
+            <div class="header-right">
+                <a href="#" class="poke-btn">TRAINER PROFILE</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="greet">
+        <h1>Review Your Adventure!</h1>
+    </div>
+
+    <div class="container mb-5">
+        <div class="owner-box p-5">
+            <h2 class="cart-header">Your Chosen Team</h2>
+            <div id="checkout-list-container">
+                <ul id="cart-list" class="list-unstyled"></ul>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div class="pokeball-icon-small"></div>
+                    <h3 class="total-text">Grand Total: ₱<span id="cart-total">0.00</span></h3>
+                </div>
+            </div>
+            
+            <hr class="thick-hr">
+            
+            <h2 class="checkout-header">Shipping Info</h2>
+            <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label fw-bold">Trainer Name</label>
+                        <input type="text" name="cust_name" placeholder="Enter Full Name" class="form-control custom-input" required>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label fw-bold">Pokedex Email</label>
+                        <input type="email" name="cust_email" placeholder="example@pokemon.com" class="form-control custom-input" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Delivery Region (Address)</label>
+                    <input type="text" name="cust_addr" placeholder="Pallet Town, Kanto..." class="form-control custom-input" required>
+                </div>
+                <input type="hidden" id="cust_order" name="cust_order" value="">
+                <button type="submit" class="confirm-btn py-3 mt-3">CONFIRM ORDER & GO!</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
