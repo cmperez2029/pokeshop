@@ -3,116 +3,84 @@
 body {
     background: url('Background.png') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Arial', sans-serif;
     margin: 0;
 }
 
-header {
+.main-header {
     background-color: #EE1515;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid black;
 }
 
-.top-header {
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo-img { height: 80px; width: auto; }
+.header-top { height: 100px; }
+.logo-img { height: 70px; }
 
 .poke-btn {
-    background-color: #333;
+    background: #333;
     color: white !important;
     text-decoration: none;
     font-family: 'Ranchers', cursive;
-    padding: 10px 15px;
-    border: 3px solid #000;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    padding: 8px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
-.sub-nav {
-    background-color: #222;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.sub-nav a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Ranchers', cursive;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
+.sub-nav { background: #111; }
+.sub-nav a { color: white; text-decoration: none; font-family: 'Ranchers'; font-size: 1.1rem; }
 
 .greet h1 {
     font-family: 'Ranchers', cursive;
-    font-size: 4rem;
-    text-align: center;
+    font-size: 3.5rem;
     color: #3C5AA6;
-    text-shadow: 3px 3px 0px #FFCB05, 5px 5px 0px #000;
-    margin: 30px 0;
+    text-shadow: 2px 2px 0px #FFCB05, 4px 4px 0px black;
 }
 
 .type-label {
-    background: #333;
+    background: #222;
     color: white;
-    font-family: 'Ranchers', cursive;
-    padding: 8px 25px;
-    border-radius: 30px;
-    border: 4px solid #000;
+    font-family: 'Ranchers';
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 3px solid black;
     display: inline-block;
 }
 
-.product {
+.product-card {
     background: white;
-    border: 4px solid #000;
-    border-radius: 15px;
-    width: 180px;
-    padding: 15px;
+    border: 3px solid black;
+    border-radius: 12px;
+    width: 150px;
+    padding: 10px;
     text-align: center;
-    font-weight: bold;
 }
 
-.product img {
-    height: 100px;
-    width: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
+.product-card img { width: 100px; height: 100px; object-fit: contain; }
+.product-card h6 { margin: 5px 0; font-weight: bold; }
 
-.add-btn {
+.product-card button {
     background: #EE1515;
     color: white;
-    border: 2px solid #000;
+    border: 2px solid black;
     border-radius: 5px;
     width: 100%;
-    font-family: 'Ranchers', cursive;
+    font-family: 'Ranchers';
 }
 
-.cart-sidebar {
+.sticky-cart {
     background: rgba(255, 255, 255, 0.95);
-    border: 4px solid #000;
+    border: 4px solid black;
     border-radius: 20px;
-    padding: 20px;
     position: sticky;
-    top: 150px;
+    top: 140px;
 }
-
-.text-red { color: #EE1515; font-family: 'Ranchers'; }
-.thick-hr { border-top: 3px solid #000; opacity: 1; }
 
 .confirm-btn {
     background: #EE1515;
     color: white;
-    border: 4px solid #000;
-    width: 100%;
-    padding: 10px;
-    font-family: 'Ranchers', cursive;
-    font-size: 1.5rem;
+    font-family: 'Ranchers';
+    font-size: 1.4rem;
+    border: 3px solid black;
     border-radius: 10px;
 }
+
+.font-ranch { font-family: 'Ranchers'; }
+.thick-hr { border-top: 3px solid black; opacity: 1; }
