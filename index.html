@@ -11,20 +11,18 @@
 </head>
 <body>
 
-  <div class="cloud" style="top: 10%; animation-duration: 25s;"></div>
-  <div class="cloud" style="top: 25%; animation-duration: 18s;"></div>
-  <div class="cloud" style="top: 40%; animation-duration: 30s;"></div>
-
-  <div style="position:fixed; bottom:20px; right:20px; width:80px; height:80px; background:white; border:5px solid black; border-radius:50%; box-shadow: inset 0 -40px 0 0 #EE1515; z-index: 100;">
-    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:20px; height:20px; background:white; border:5px solid black; border-radius:50%;"></div>
+  <div class="bottom-poke-deco">
+    <div class="bottom-poke-inner"></div>
   </div>
 
   <header>
-    <img src="header.png" alt="PokeShop" class="header-logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About the Company</a>
-    </nav>
+    <div class="header-container">
+      <img src="header.png" alt="PokeShop" class="header-logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About the Company</a>
+      </nav>
+    </div>
   </header>
 
   <div class="greet">
@@ -32,141 +30,142 @@
   </div>
 
   <div id="wrapper" class="d-flex gap-3 px-3">
+    
     <div id="catalog" class="flex-grow-1">
 
       <h2>Water Types</h2>
       <div class="category d-flex flex-wrap gap-5 mb-3">
         <div class="product">
-          <img src="water1.png" alt="Psyduck" width="120">
+          <img src="water1.png" alt="Psyduck">
           <p class="prod-name">Psyduck</p>
           <p class="prod-price">₱8,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Psyduck', 8000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Psyduck', 8000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="water2.png" alt="Squirtle" width="120">
+          <img src="water2.png" alt="Squirtle">
           <p class="prod-name">Squirtle</p>
           <p class="prod-price">₱10,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Squirtle', 10000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Squirtle', 10000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="water3.png" alt="Wailmer" width="120">
+          <img src="water3.png" alt="Wailmer">
           <p class="prod-name">Wailmer</p>
           <p class="prod-price">₱7,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Wailmer', 7000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Wailmer', 7000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="water4.png" alt="Piplup" width="120">
+          <img src="water4.png" alt="Piplup">
           <p class="prod-name">Piplup</p>
           <p class="prod-price">₱10,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Piplup', 10000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Piplup', 10000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="water5.png" alt="Magikarp" width="120">
+          <img src="water5.png" alt="Magikarp">
           <p class="prod-name">Magikarp</p>
           <p class="prod-price">₱3,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Magikarp', 3000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Magikarp', 3000.00)">Add to Cart</button>
         </div>
       </div>
 
       <h2>Electric Types</h2>
       <div class="category d-flex flex-wrap gap-5 mb-3">
         <div class="product">
-          <img src="electric1.png" alt="Pikachu" width="120">
+          <img src="electric1.png" alt="Pikachu">
           <p class="prod-name">Pikachu</p>
           <p class="prod-price">₱3,150.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Pikachu', 3150.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Pikachu', 3150.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="electric2.png" alt="Mareep" width="120">
+          <img src="electric2.png" alt="Mareep">
           <p class="prod-name">Mareep</p>
           <p class="prod-price">₱2,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Mareep', 2000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Mareep', 2000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="electric3.png" alt="Electabuzz" width="120">
+          <img src="electric3.png" alt="Electabuzz">
           <p class="prod-name">Electabuzz</p>
           <p class="prod-price">₱8,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Electabuzz', 8000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Electabuzz', 8000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="electric4.png" alt="Ampharos" width="120">
+          <img src="electric4.png" alt="Ampharos">
           <p class="prod-name">Ampharos</p>
           <p class="prod-price">₱7,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Ampharos', 7000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Ampharos', 7000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="electric5.png" alt="Luxray" width="120">
+          <img src="electric5.png" alt="Luxray">
           <p class="prod-name">Luxray</p>
           <p class="prod-price">₱9,500.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Luxray', 9500.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Luxray', 9500.00)">Add to Cart</button>
         </div>
       </div>
 
       <h2>Fire Types</h2>
       <div class="category d-flex flex-wrap gap-5 mb-3">
         <div class="product">
-          <img src="fire1.png" alt="Charmander" width="120"> 
+          <img src="fire1.png" alt="Charmander">
           <p class="prod-name">Charmander</p>
           <p class="prod-price">₱10,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Charmander', 10000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Charmander', 10000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="fire2.png" alt="Magmar" width="120">
+          <img src="fire2.png" alt="Magmar">
           <p class="prod-name">Magmar</p>
           <p class="prod-price">₱8,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Magmar', 8000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Magmar', 8000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="fire3.png" alt="Torchic" width="120">
+          <img src="fire3.png" alt="Torchic">
           <p class="prod-name">Torchic</p>
           <p class="prod-price">₱10,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Torchic', 10000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Torchic', 10000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="fire4.png" alt="Growlithe" width="120">
+          <img src="fire4.png" alt="Growlithe">
           <p class="prod-name">Growlithe</p>
           <p class="prod-price">₱4,200.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Growlithe', 4200.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Growlithe', 4200.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="fire5.png" alt="Talonflame" width="120">
+          <img src="fire5.png" alt="Talonflame">
           <p class="prod-name">Talonflame</p>
           <p class="prod-price">₱5,200.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Talonflame', 5200.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Talonflame', 5200.00)">Add to Cart</button>
         </div>
       </div>
 
       <h2>Legendaries</h2>
       <div class="category d-flex flex-wrap gap-5 mb-3">
         <div class="product">
-          <img src="cat4-1.png" alt="Mewtwo" width="120">
+          <img src="cat4-1.png" alt="Mewtwo">
           <p class="prod-name">Mewtwo</p>
           <p class="prod-price">₱6,000,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Mewtwo', 6000000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Mewtwo', 6000000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="cat4-2.png" alt="Rayquaza" width="120">
+          <img src="cat4-2.png" alt="Rayquaza">
           <p class="prod-name">Rayquaza</p>
           <p class="prod-price">₱4,000,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Rayquaza', 4000000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Rayquaza', 4000000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="cat4-3.png" alt="Jirachi" width="120">
+          <img src="cat4-3.png" alt="Jirachi">
           <p class="prod-name">Jirachi</p>
           <p class="prod-price">₱2,000,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Jirachi', 2000000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Jirachi', 2000000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="cat4-4.png" alt="Giratina" width="120">
+          <img src="cat4-4.png" alt="Giratina">
           <p class="prod-name">Giratina</p>
           <p class="prod-price">₱4,500,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Giratina', 4500000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Giratina', 4500000.00)">Add to Cart</button>
         </div>
         <div class="product">
-          <img src="cat4-5.png" alt="Ultra Necrozma" width="120">
+          <img src="cat4-5.png" alt="Ultra Necrozma">
           <p class="prod-name">Ultra Necrozma</p>
           <p class="prod-price">₱5,000,000.00</p>
-          <button class="btn btn-sm btn-danger" onclick="addToCart('Ultra Necrozma', 5000000.00)">Add to Cart</button>
+          <button class="btn btn-sm btn-danger w-100" onclick="addToCart('Ultra Necrozma', 5000000.00)">Add to Cart</button>
         </div>
       </div>
 
@@ -181,13 +180,10 @@
       <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
         <label for="cust_name">Name:</label><br>
         <input type="text" id="cust_name" name="cust_name" class="form-control mb-2" required><br>
-
         <label for="cust_email">Email:</label><br>
         <input type="email" id="cust_email" name="cust_email" class="form-control mb-2" required><br>
-
         <label for="cust_addr">Delivery Address:</label><br>
         <input type="text" id="cust_addr" name="cust_addr" class="form-control mb-2" required><br>
-
         <input type="hidden" id="cust_order" name="cust_order" value="[]">
         <button type="submit" class="btn btn-danger w-100">Confirm Purchase</button>
       </form>
