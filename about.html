@@ -4,54 +4,40 @@
     <meta charset="UTF-8">
     <title>About the Company</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="top-header">
-            <div class="header-left">
-                <a href="index.html" class="poke-btn">HOME</a>
-                <a href="about.html" class="poke-btn">ABOUT THE COMPANY</a>
+<body class="about-page">
+    <header class="red-header">
+        <div class="header-main d-flex justify-content-between align-items-center px-4 py-2">
+            <div class="left-nav">
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="about.html" class="nav-btn">ABOUT THE COMPANY</a>
             </div>
-            <div class="header-center">
-                <img src="Header.png" alt="PokeShop" class="logo-img">
-            </div>
-            <div class="header-right">
-                <a href="checkout.html" class="poke-btn">VIEW CART</a>
+            <img src="header.png" alt="PokeShop" class="main-logo">
+            <div class="right-nav">
+                <div class="profile-bar">VIEW CART</div>
             </div>
         </div>
     </header>
 
-    <div class="greet"><h1>Project Owners</h1></div>
-
-    <div id="wrapper" class="container mt-5">
-        <div class="owner-box">
-            <div class="row text-center gy-4">
-                <div class="col-md-4">
-                    <div class="owner-card p-4">
-                        <h3 class="owner-name text-red">Joaquin Vladimir Tan</h3>
-                        <hr class="thick-hr">
-                        <p><strong>Primary Role:</strong> Website Layout</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="owner-card p-4">
-                        <h3 class="owner-name text-blue">Cassandra Louise Perez</h3>
-                        <hr class="thick-hr">
-                        <p><strong>Primary Role:</strong> CSS Styling</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="owner-card p-4">
-                        <h3 class="owner-name text-blue">Yuri Cielo Regencia</h3>
-                        <hr class="thick-hr">
-                        <p><strong>Primary Role:</strong> CSS Styling</p>
-                    </div>
-                </div>
+    <div class="container mt-5">
+        <h1 class="project-title mb-5">Project Owners</h1>
+        
+        <div class="row text-center owner-row">
+            <div class="col-md-4">
+                <h3 class="owner-name">Joaquin Vladimir Tan</h3>
+                <p class="role-text"><strong>Primary Role:</strong> Website Layout</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="owner-name">Cassandra Louise Perez</h3>
+                <p class="role-text"><strong>Primary Role:</strong> CSS Styling</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="owner-name">Yuri Cielo Regencia</h3>
+                <p class="role-text"><strong>Primary Role:</strong> CSS Styling</p>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
