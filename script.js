@@ -32,3 +32,4 @@ function updateCartDisplay() {
     hiddenOrderInput.value = JSON.stringify(cart);
   }
 }
+
