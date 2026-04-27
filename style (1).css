@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  font-family: "Ranchers", static;
+  background-color:#B32624;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.greet{
+  margin-top:30px;
+  text-align:center;
+}
+#wrapper {
+  margin-left:50px;
+}
+h2 {
+  margin-top: 50px;
+  margin-bottom:20px;
+}
+header h1 {
+  color: white;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.product {
+  border: 1px solid black;
+  padding: 10px;
+  width: 140px;
+  text-align: center;
+}
+
+.product p {
+  margin: 5px 0;
+}
+#cart-section {
+  margin-right:3cm;
+}
+#cart-list li {
+  margin-bottom: 5px;
+}
+section {
+  margin-left:20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
