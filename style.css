@@ -28,8 +28,7 @@ header {
     width: auto;
 }
 
-/* Fixes the "tiny blue text" issue */
-.nav-box {
+.poke-btn {
     background-color: #C64444;
     color: white !important;
     text-decoration: none !important;
@@ -39,9 +38,10 @@ header {
     border-radius: 8px;
     box-shadow: 3px 3px 0px #000;
     font-size: 1.1rem;
+    display: inline-block;
 }
 
-.nav-box:hover {
+.poke-btn:hover {
     background-color: #FFCB05;
     color: #000 !important;
 }
@@ -63,56 +63,12 @@ header {
     text-shadow: 2px 2px 0px #000;
 }
 
-/* Prevents the 'Welcome' text from overlapping */
+.sub-nav a:hover { color: #FFCB05; }
+
 .greet {
     margin-top: 40px;
     position: relative;
     z-index: 1;
-}
-
-.header-left, .header-right {
-    display: flex;
-    gap: 15px;
-    z-index: 2;
-}
-
-.top-header a {
-    color: white !important;
-    text-decoration: none;
-    font-family: 'Ranchers', cursive;
-    background-color: #C64444;
-    padding: 8px 15px;
-    border: 3px solid #000;
-    border-radius: 10px;
-    box-shadow: 3px 3px 0px #000;
-    font-size: 1.2rem;
-}
-
-.top-header a:hover {
-    background-color: #FFCB05;
-    color: #000 !important;
-}
-
-.sub-nav {
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 12px;
-    border-bottom: 5px solid #000;
-}
-
-.sub-nav a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Ranchers', cursive;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 0px #000;
-}
-
-.sub-nav a:hover {
-    color: #FFCB05;
 }
 
 .greet h1 {
@@ -121,13 +77,11 @@ header {
     text-align: center;
     color: #3C5AA6;
     text-shadow: 4px 4px 0px #FFCB05, 7px 7px 0px #000;
-    margin: 45px 0;
 }
 
-#wrapper {
-    background: transparent;
-}
+#wrapper { background: transparent; }
 
+/* PRODUCT CATALOG */
 .type-label {
     background: #333;
     color: white;
@@ -140,7 +94,7 @@ header {
 }
 
 .product {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border: 4px solid #000;
     border-radius: 15px;
     width: 220px;
@@ -149,11 +103,9 @@ header {
     transition: transform 0.2s;
 }
 
-.product:hover {
-    transform: translateY(-10px);
-}
+.product:hover { transform: translateY(-10px); }
 
-.product img { width: 130px; height: 130px; }
+.product img { width: 130px; height: 130px; object-fit: contain; }
 
 .prod-name { font-family: 'Ranchers', cursive; font-size: 1.6rem; margin: 15px 0 5px; }
 
@@ -169,6 +121,7 @@ header {
     font-family: 'Ranchers', cursive;
 }
 
+/* CART SECTION */
 #cart-section {
     width: 400px;
     background: rgba(255, 255, 255, 0.95);
@@ -176,18 +129,29 @@ header {
     border-radius: 20px;
     height: fit-content;
     position: sticky;
-    top: 180px;
+    top: 150px;
 }
 
 .cart-header, .checkout-header {
     color: #EE1515;
     font-family: 'Ranchers', cursive;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     padding-top: 20px;
 }
 
 .cart-body { padding: 30px; }
+
+.cart-item {
+    font-size: 1.1rem;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 8px;
+}
+
+.del-btn {
+    border: 2px solid #000;
+    font-weight: bold;
+}
 
 .confirm-btn {
     background: #EE1515;
@@ -211,3 +175,22 @@ header {
     right: 20px;
     box-shadow: inset 0 -35px 0 0 #EE1515;
 }
+.owner-box {
+    background: rgba(255,255,255,0.95);
+    border: 6px solid #000;
+    border-radius: 25px;
+    padding: 60px;
+}
+
+.owner-card {
+    padding: 1.5rem;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.owner-name { font-family: 'Ranchers', cursive; }
+.text-red { color: #EE1515; }
+.text-blue { color: #3C5AA6; }
+.thick-hr { border-top: 3px solid #000; opacity: 1; }
