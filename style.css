@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
 body {
-    background: url('background.png') no-repeat center center fixed;
+    background: url('Background.png') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
 }
@@ -34,6 +34,7 @@ header {
     border: 3px solid #000;
     border-radius: 8px;
     box-shadow: 3px 3px 0px #000;
+    display: inline-block;
 }
 
 .sub-nav {
@@ -93,6 +94,18 @@ header {
     padding: 10px 30px;
     border-radius: 50px;
     border: 3px solid #000;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background: #EE1515;
+    color: white;
+    border: 3px solid #000;
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px;
+    font-family: 'Ranchers', cursive;
 }
 
 .confirm-btn {
