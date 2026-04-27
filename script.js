@@ -1,20 +1,13 @@
-var cart = JSON.parse(localStorage.getItem('pokeshop_cart')) || [];
+let cart = [];
 
 function addToCart(name, price) {
     cart.push({ prod_name: name, prod_price: price });
-    localStorage.setItem('pokeshop_cart', JSON.stringify(cart));
-    updateDisplay();
-}
-
-function updateDisplay() {
-    var total = 0;
-    cart.forEach(item => total += item.prod_price);
     
-    var display = document.getElementById("cart-total-top");
-    if(display) display.innerText = "₱" + total.toLocaleString();
+    let total = cart.reduce((sum, item) => sum + item.prod_price, 0);
     
-    var hiddenInput = document.getElementById("cust_order");
-    if(hiddenInput) hiddenInput.value = JSON.stringify(cart);
+    document.getElementById("cart-total-side").innerText = "₱" + total.toLocaleString();
+    
+    document.getElementById("cust_order").value = JSON.stringify(cart);
+    
+    console.log("Added:", name);
 }
-
-document.addEventListener("DOMContentLoaded", updateDisplay);
