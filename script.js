@@ -20,7 +20,10 @@ function renderCart() {
     
     cartArr.forEach((item, i) => {
         sum += item.prod_price;
-        list.innerHTML += `<div class="d-flex justify-content-between"><span>${item.prod_name}</span><button type="button" class="btn btn-sm text-danger" onclick="remove(${i})">x</button></div>`;
+        list.innerHTML += `<div class="d-flex justify-content-between border-bottom py-1">
+            <span>${item.prod_name}</span>
+            <button type="button" class="btn btn-sm text-danger" onclick="remove(${i})">x</button>
+        </div>`;
     });
     
     totalOut.innerText = "₱" + sum.toLocaleString();
