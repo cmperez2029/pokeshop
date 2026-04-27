@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeShop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
+
+<header class="main-header">
     <div class="logo-container">
-        <img src="header.png" alt="PokeShop Header" class="header-img">
+        <img src="Header.png" class="header-img">
     </div>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="about.html">ABOUT</a></li>
         </ul>
     </nav>
     <div class="cart-status">
@@ -24,62 +24,56 @@
     </div>
 </header>
 
-    <div class="container-fluid mt-5 px-5">
-        <div class="row">
-            <div class="col-md-9">
-                <h2 class="type-label">Water Types</h2>
-                <div class="d-flex flex-wrap gap-3 mb-5">
-                    <div class="product-card"><img src="Psyduck.png"><h6>Psyduck</h6><button onclick="addToCart('Psyduck', 8000)">₱8,000</button></div>
-                    <div class="product-card"><img src="squirtle.png"><h6>Squirtle</h6><button onclick="addToCart('Squirtle', 10000)">₱10,000</button></div>
-                    <div class="product-card"><img src="Wailmer.png"><h6>Wailmer</h6><button onclick="addToCart('Wailmer', 7000)">₱7,000</button></div>
-                    <div class="product-card"><img src="Piplup.png"><h6>Piplup</h6><button onclick="addToCart('Piplup', 10000)">₱10,000</button></div>
-                    <div class="product-card"><img src="Magikarp.png"><h6>Magikarp</h6><button onclick="addToCart('Magikarp', 3000)">₱3,000</button></div>
-                </div>
-
-                <h2 class="type-label">Electric Types</h2>
-                <div class="d-flex flex-wrap gap-3 mb-5">
-                    <div class="product-card"><img src="Ampharos.png"><h6>Ampharos</h6><button onclick="addToCart('Ampharos', 7000)">₱7,000</button></div>
-                    <div class="product-card"><img src="Electabuzz.png"><h6>Electabuzz</h6><button onclick="addToCart('Electabuzz', 8000)">₱8,000</button></div>
-                    <div class="product-card"><img src="Luxray.png"><h6>Luxray</h6><button onclick="addToCart('Luxray', 9500)">₱9,500</button></div>
-                    <div class="product-card"><img src="Mareep.png"><h6>Mareep</h6><button onclick="addToCart('Mareep', 2000)">₱2,000</button></div>
-                    <div class="product-card"><img src="Pikachu.png"><h6>Pikachu</h6><button onclick="addToCart('Pikachu', 3150)">₱3,150</button></div>
-                </div>
-
-                <h2 class="type-label">Fire Types</h2>
-                <div class="d-flex flex-wrap gap-3 mb-5">
-                    <div class="product-card"><img src="Arcanine.png"><h6>Arcanine</h6><button onclick="addToCart('Arcanine', 12000)">₱12,000</button></div>
-                    <div class="product-card"><img src="Charmander.png"><h6>Charmander</h6><button onclick="addToCart('Charmander', 10000)">₱10,000</button></div>
-                    <div class="product-card"><img src="Magmar.png"><h6>Magmar</h6><button onclick="addToCart('Magmar', 8500)">₱8,500</button></div>
-                    <div class="product-card"><img src="talonflame.png"><h6>Talonflame</h6><button onclick="addToCart('Talonflame', 9000)">₱9,000</button></div>
-                    <div class="product-card"><img src="Torchic.png"><h6>Torchic</h6><button onclick="addToCart('Torchic', 9000)">₱9,000</button></div>
-                </div>
-
-                <h2 class="type-label">Legendary</h2>
-                <div class="d-flex flex-wrap gap-3 mb-5">
-                    <div class="product-card"><img src="Arceus.png"><h6>Arceus</h6><button onclick="addToCart('Arceus', 50000)">₱50,000</button></div>
-                    <div class="product-card"><img src="Giratina.png"><h6>Giratina</h6><button onclick="addToCart('Giratina', 45000)">₱45,000</button></div>
-                    <div class="product-card"><img src="Jirachi.png"><h6>Jirachi</h6><button onclick="addToCart('Jirachi', 40000)">₱40,000</button></div>
-                    <div class="product-card"><img src="Mewtwo.png"><h6>Mewtwo</h6><button onclick="addToCart('Mewtwo', 50000)">₱50,000</button></div>
-                    <div class="product-card"><img src="Rayquaza.png"><h6>Rayquaza</h6><button onclick="addToCart('Rayquaza', 48000)">₱48,000</button></div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="cart-container p-3">
-                    <h3 class="font-ranch">Cart</h3>
-                    <div id="cart-items" class="mb-3"></div>
-                    <h5 class="font-ranch">Total: <span id="total-val">₱0</span></h5>
-                    <form action="http://52.74.133.173/cs3/checkout.php" method="POST">
-                        <input type="text" name="cust_name" placeholder="Name" class="form-control mb-2" required>
-                        <input type="text" name="cust_addr" placeholder="Address" class="form-control mb-2" required>
-                        <input type="email" name="cust_email" placeholder="Email" class="form-control mb-2" required>
-                        <input type="hidden" id="cust_order" name="cust_order">
-                        <button type="submit" class="btn btn-danger w-100 font-ranch">CHECKOUT</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+<main id="shop">
+    <h2 class="category-title">Water Types</h2>
+    <div class="shop-section">
+        <div class="product-card"><img src="Psyduck.png" class="product-img"><h3>Psyduck</h3><p>P8,000</p><button onclick="addToCart('Psyduck', 8000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Squirtle.png" class="product-img"><h3>Squirtle</h3><p>P10,000</p><button onclick="addToCart('Squirtle', 10000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Wailmer.png" class="product-img"><h3>Wailmer</h3><p>P7,000</p><button onclick="addToCart('Wailmer', 7000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Piplup.png" class="product-img"><h3>Piplup</h3><p>P10,000</p><button onclick="addToCart('Piplup', 10000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Magikarp.png" class="product-img"><h3>Magikarp</h3><p>P500</p><button onclick="addToCart('Magikarp', 500)">Add to Cart</button></div>
     </div>
-    <script src="script.js"></script>
+
+    <h2 class="category-title">Electric Types</h2>
+    <div class="shop-section">
+        <div class="product-card"><img src="Ampharos.png" class="product-img"><h3>Ampharos</h3><p>P12,000</p><button onclick="addToCart('Ampharos', 12000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Electabuzz.png" class="product-img"><h3>Electabuzz</h3><p>P11,000</p><button onclick="addToCart('Electabuzz', 11000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Luxray.png" class="product-img"><h3>Luxray</h3><p>P20,000</p><button onclick="addToCart('Luxray', 20000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Mareep.png" class="product-img"><h3>Mareep</h3><p>P4,000</p><button onclick="addToCart('Mareep', 4000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Pikachu.png" class="product-img"><h3>Pikachu</h3><p>P12,000</p><button onclick="addToCart('Pikachu', 12000)">Add to Cart</button></div>
+    </div>
+
+    <h2 class="category-title">Fire Types</h2>
+    <div class="shop-section">
+        <div class="product-card"><img src="Charmander.png" class="product-img"><h3>Charmander</h3><p>P10,000</p><button onclick="addToCart('Charmander', 10000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Cyndaquil.png" class="product-img"><h3>Cyndaquil</h3><p>P9,000</p><button onclick="addToCart('Cyndaquil', 9000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Vulpix.png" class="product-img"><h3>Vulpix</h3><p>P8,500</p><button onclick="addToCart('Vulpix', 8500)">Add to Cart</button></div>
+        <div class="product-card"><img src="Arcanine.png" class="product-img"><h3>Arcanine</h3><p>P25,000</p><button onclick="addToCart('Arcanine', 25000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Flareon.png" class="product-img"><h3>Flareon</h3><p>P15,000</p><button onclick="addToCart('Flareon', 15000)">Add to Cart</button></div>
+    </div>
+
+    <h2 class="category-title">Grass Types</h2>
+    <div class="shop-section">
+        <div class="product-card"><img src="Bulbasaur.png" class="product-img"><h3>Bulbasaur</h3><p>P10,000</p><button onclick="addToCart('Bulbasaur', 10000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Chikorita.png" class="product-img"><h3>Chikorita</h3><p>P9,000</p><button onclick="addToCart('Chikorita', 9000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Oddish.png" class="product-img"><h3>Oddish</h3><p>P3,000</p><button onclick="addToCart('Oddish', 3000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Leafeon.png" class="product-img"><h3>Leafeon</h3><p>P15,000</p><button onclick="addToCart('Leafeon', 15000)">Add to Cart</button></div>
+        <div class="product-card"><img src="Rowlet.png" class="product-img"><h3>Rowlet</h3><p>P11,000</p><button onclick="addToCart('Rowlet', 11000)">Add to Cart</button></div>
+    </div>
+</main>
+
+<section id="checkout-section">
+    <h2>Checkout</h2>
+    <p id="total-price">Total: P0</p>
+    <form id="order-form" action="https://pshs-clc.edu.ph/submit_order.php" method="POST">
+        <input type="text" name="cust_name" placeholder="Full Name" required>
+        <input type="text" name="cust_addr" placeholder="Address" required>
+        <input type="email" name="cust_email" placeholder="Email" required>
+        <input type="hidden" name="cust_order" id="cust_order_input">
+        <button type="submit" id="checkout-btn">SUBMIT ORDER</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
