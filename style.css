@@ -6,11 +6,7 @@ body {
     margin: 0;
 }
 
-.main-header {
-    background-color: #EE1515;
-    border-bottom: 5px solid black;
-}
-
+.main-header { background-color: #EE1515; border-bottom: 5px solid black; }
 .header-top { height: 100px; }
 .logo-img { height: 70px; }
 
@@ -25,11 +21,11 @@ body {
 }
 
 .sub-nav { background: #111; }
-.sub-nav a { color: white; text-decoration: none; font-family: 'Ranchers'; font-size: 1.1rem; }
+.sub-nav a { color: white; text-decoration: none; font-family: 'Ranchers'; padding: 0 10px; }
 
 .greet h1 {
     font-family: 'Ranchers', cursive;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #3C5AA6;
     text-shadow: 2px 2px 0px #FFCB05, 4px 4px 0px black;
 }
@@ -54,7 +50,6 @@ body {
 }
 
 .product-card img { width: 100px; height: 100px; object-fit: contain; }
-.product-card h6 { margin: 5px 0; font-weight: bold; }
 
 .product-card button {
     background: #EE1515;
@@ -70,17 +65,16 @@ body {
     border: 4px solid black;
     border-radius: 20px;
     position: sticky;
-    top: 140px;
+    top: 20px;
 }
 
 .confirm-btn {
     background: #EE1515;
     color: white;
     font-family: 'Ranchers';
-    font-size: 1.4rem;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .font-ranch { font-family: 'Ranchers'; }
-.thick-hr { border-top: 3px solid black; opacity: 1; }
