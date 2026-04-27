@@ -3,7 +3,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     margin: 0;
+    padding: 0;
 }
 
 .main-header {
@@ -16,19 +18,45 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: 80px; 
 }
 
 .header-img {
-    height: 60px;
+    max-height: 70px; 
     width: auto;
     display: block;
 }
 
-.main-header ul {
+.logo-container {
+    flex: 1;
+}
+
+nav {
+    flex: 2;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 25px;
     margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cart-status {
+    flex: 1;
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .main-header a {
