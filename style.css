@@ -4,8 +4,8 @@ body {
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 header {
     width: 100%;
     position: sticky;
@@ -23,10 +23,7 @@ header {
     border-bottom: 5px solid #000;
 }
 
-.logo-img {
-    height: 90px;
-    width: auto;
-}
+.logo-img { height: 90px; width: auto; }
 
 .poke-btn {
     background-color: #C64444;
@@ -37,13 +34,6 @@ header {
     border: 3px solid #000;
     border-radius: 8px;
     box-shadow: 3px 3px 0px #000;
-    font-size: 1.1rem;
-    display: inline-block;
-}
-
-.poke-btn:hover {
-    background-color: #FFCB05;
-    color: #000 !important;
 }
 
 .sub-nav {
@@ -60,37 +50,29 @@ header {
     text-decoration: none;
     font-family: 'Ranchers', cursive;
     font-size: 1.4rem;
-    text-shadow: 2px 2px 0px #000;
-}
-
-.sub-nav a:hover { color: #FFCB05; }
-
-.greet {
-    margin-top: 40px;
-    position: relative;
-    z-index: 1;
 }
 
 .greet h1 {
     font-family: 'Ranchers', cursive;
-    font-size: 5.5rem;
+    font-size: 5rem;
     text-align: center;
     color: #3C5AA6;
-    text-shadow: 4px 4px 0px #FFCB05, 7px 7px 0px #000;
+    text-shadow: 4px 4px 0px #FFCB05, 6px 6px 0px #000;
+    margin: 40px 0;
 }
 
-#wrapper { background: transparent; }
+.owner-box {
+    background: rgba(255,255,255,0.95);
+    border: 6px solid #000;
+    border-radius: 25px;
+    padding: 50px;
+}
 
-/* PRODUCT CATALOG */
-.type-label {
-    background: #333;
-    color: white;
-    font-family: 'Ranchers', cursive;
-    padding: 12px 35px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 35px;
-    border: 4px solid #000;
+.owner-card {
+    background: white;
+    border: 3px solid #000;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .product {
@@ -100,97 +82,31 @@ header {
     width: 220px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.2s;
 }
 
-.product:hover { transform: translateY(-10px); }
+.product img { height: 130px; object-fit: contain; }
 
-.product img { width: 130px; height: 130px; object-fit: contain; }
-
-.prod-name { font-family: 'Ranchers', cursive; font-size: 1.6rem; margin: 15px 0 5px; }
-
-.prod-price { color: #2E7D32; font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
-
-.add-btn {
-    background: #EE1515;
+.type-label {
+    background: #333;
     color: white;
+    font-family: 'Ranchers', cursive;
+    padding: 10px 30px;
+    border-radius: 50px;
     border: 3px solid #000;
-    border-radius: 8px;
-    width: 100%;
-    padding: 8px;
-    font-family: 'Ranchers', cursive;
-}
-
-/* CART SECTION */
-#cart-section {
-    width: 400px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 6px solid #000;
-    border-radius: 20px;
-    height: fit-content;
-    position: sticky;
-    top: 150px;
-}
-
-.cart-header, .checkout-header {
-    color: #EE1515;
-    font-family: 'Ranchers', cursive;
-    text-align: center;
-    font-size: 2.5rem;
-    padding-top: 20px;
-}
-
-.cart-body { padding: 30px; }
-
-.cart-item {
-    font-size: 1.1rem;
-    border-bottom: 2px dashed #333;
-    padding-bottom: 8px;
-}
-
-.del-btn {
-    border: 2px solid #000;
-    font-weight: bold;
 }
 
 .confirm-btn {
     background: #EE1515;
     color: white;
     border: 4px solid #000;
-    border-radius: 12px;
     width: 100%;
     padding: 15px;
     font-family: 'Ranchers', cursive;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    border-radius: 12px;
 }
 
-.pokeball-icon {
-    width: 70px;
-    height: 70px;
-    background: white;
-    border: 5px solid #000;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: inset 0 -35px 0 0 #EE1515;
-}
-.owner-box {
-    background: rgba(255,255,255,0.95);
-    border: 6px solid #000;
-    border-radius: 25px;
-    padding: 60px;
-}
-
-.owner-card {
-    padding: 1.5rem;
-    border: 2px solid #000;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.owner-name { font-family: 'Ranchers', cursive; }
-.text-red { color: #EE1515; }
-.text-blue { color: #3C5AA6; }
+.custom-input { border: 3px solid #000 !important; padding: 12px !important; }
+.text-red { color: #EE1515; font-family: 'Ranchers'; }
+.text-blue { color: #3C5AA6; font-family: 'Ranchers'; }
 .thick-hr { border-top: 3px solid #000; opacity: 1; }
