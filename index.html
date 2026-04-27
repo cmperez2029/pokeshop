@@ -4,34 +4,33 @@
   <meta charset="UTF-8">
   <title>Pokemon Shopping Center</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-  <div class="top-header">
-    <div class="header-left">
-      <a href="index.html" class="nav-box">HOME</a>
-      <a href="about.html" class="nav-box">ABOUT THE COMPANY</a>
+    <div class="top-header">
+      <div class="header-left">
+        <a href="index.html" class="poke-btn">HOME</a>
+        <a href="about.html" class="poke-btn">ABOUT THE COMPANY</a>
+      </div>
+      <div class="header-center">
+        <img src="header.png" alt="PokeShop" class="logo-img">
+      </div>
+      <div class="header-right">
+        <a href="#" class="poke-btn">TRAINER PROFILE</a>
+      </div>
     </div>
-    <div class="header-center">
-      <img src="header.png" alt="PokeShop" class="logo-img">
-    </div>
-    <div class="header-right">
-      <a href="#" class="nav-box">TRAINER PROFILE</a>
-    </div>
-  </div>
-  <nav class="sub-nav">
-    <a href="#">POKEMON</a>
-    <a href="#">ITEMS</a>
-    <a href="#">GEAR</a>
-    <a href="#">CART</a>
-    <a href="#">BATTLE</a>
-  </nav>
-</header>
+    <nav class="sub-nav">
+      <a href="#">POKEMON</a>
+      <a href="#">ITEMS</a>
+      <a href="#">GEAR</a>
+      <a href="#">CART</a>
+      <a href="#">BATTLE</a>
+    </nav>
   </header>
 
   <div class="greet">
@@ -109,74 +108,6 @@
         </div>
       </div>
 
-      <h2 class="type-label">Fire Types</h2>
-      <div class="category d-flex flex-wrap gap-4 mb-5">
-        <div class="product">
-          <img src="charmander.png" alt="Charmander">
-          <p class="prod-name">Charmander</p>
-          <p class="prod-price">₱10,000.00</p>
-          <button class="add-btn" onclick="addToCart('Charmander', 10000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="magmar.png" alt="Magmar">
-          <p class="prod-name">Magmar</p>
-          <p class="prod-price">₱8,000.00</p>
-          <button class="add-btn" onclick="addToCart('Magmar', 8000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="torchic.png" alt="Torchic">
-          <p class="prod-name">Torchic</p>
-          <p class="prod-price">₱10,000.00</p>
-          <button class="add-btn" onclick="addToCart('Torchic', 10000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="growlithe.png" alt="Growlithe">
-          <p class="prod-name">Growlithe</p>
-          <p class="prod-price">₱4,200.00</p>
-          <button class="add-btn" onclick="addToCart('Growlithe', 4200)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="talonflame.png" alt="Talonflame">
-          <p class="prod-name">Talonflame</p>
-          <p class="prod-price">₱5,200.00</p>
-          <button class="add-btn" onclick="addToCart('Talonflame', 5200)">Add to Cart</button>
-        </div>
-      </div>
-
-      <h2 class="type-label">Legendaries</h2>
-      <div class="category d-flex flex-wrap gap-4">
-        <div class="product">
-          <img src="mewtwo.png" alt="Mewtwo">
-          <p class="prod-name">Mewtwo</p>
-          <p class="prod-price">₱6,000,000.00</p>
-          <button class="add-btn" onclick="addToCart('Mewtwo', 6000000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="rayquaza.png" alt="Rayquaza">
-          <p class="prod-name">Rayquaza</p>
-          <p class="prod-price">₱4,000,000.00</p>
-          <button class="add-btn" onclick="addToCart('Rayquaza', 4000000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="jirachi.png" alt="Jirachi">
-          <p class="prod-name">Jirachi</p>
-          <p class="prod-price">₱2,000,000.00</p>
-          <button class="add-btn" onclick="addToCart('Jirachi', 2000000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="giratina.png" alt="Giratina">
-          <p class="prod-name">Giratina</p>
-          <p class="prod-price">₱4,500,000.00</p>
-          <button class="add-btn" onclick="addToCart('Giratina', 4500000)">Add to Cart</button>
-        </div>
-        <div class="product">
-          <img src="ultranecrozma.png" alt="Ultra Necrozma">
-          <p class="prod-name">Ultra Necrozma</p>
-          <p class="prod-price">₱5,000,000.00</p>
-          <button class="add-btn" onclick="addToCart('Ultra Necrozma', 5000000)">Add to Cart</button>
-        </div>
-      </div>
-
     </div>
 
     <div id="cart-section">
@@ -186,11 +117,14 @@
         <ul id="cart-list" class="list-unstyled"></ul>
         <hr>
         <h3 class="checkout-header">Checkout</h3>
+        
         <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
           <input type="text" name="cust_name" placeholder="Name" class="form-control mb-2" required>
           <input type="email" name="cust_email" placeholder="Email" class="form-control mb-2" required>
           <input type="text" name="cust_addr" placeholder="Delivery Address" class="form-control mb-2" required>
+          
           <input type="hidden" id="cust_order" name="cust_order" value="[]">
+          
           <button type="submit" class="confirm-btn">Confirm Purchase</button>
         </form>
       </div>
