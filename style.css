@@ -1,12 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
-body { background: url('Background.png') fixed center; background-size: cover; }
-.main-header { background: #EE1515; border-bottom: 5px solid black; padding: 10px; }
-.logo-img { height: 60px; }
-.poke-btn { background: #333; color: white !important; font-family: 'Ranchers'; padding: 10px; border-radius: 5px; text-decoration: none; }
-.type-label { background: black; color: white; padding: 5px 20px; font-family: 'Ranchers'; border-radius: 20px; margin-top: 20px; }
-.product-card { background: white; border: 3px solid black; border-radius: 15px; width: 150px; padding: 10px; text-align: center; }
-.product-card img { width: 100px; height: 100px; object-fit: contain; }
-.product-card button { background: #EE1515; color: white; border: 2px solid black; width: 100%; font-family: 'Ranchers'; margin-top: 5px; }
-.cart-container { background: white; border: 4px solid black; border-radius: 20px; position: sticky; top: 20px; }
-.checkout-btn { background: #EE1515; color: white; font-family: 'Ranchers'; border: 3px solid black; border-radius: 10px; font-size: 1.2rem; }
+
+body {
+    background: url('Background.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-header { background: #EE1515; border-bottom: 5px solid black; }
+.header-top { height: 100px; }
+.logo-img { height: 70px; }
+
+.poke-btn {
+    background: #333; color: white !important;
+    font-family: 'Ranchers', cursive;
+    padding: 8px 15px; border: 2px solid black; border-radius: 5px;
+    text-decoration: none;
+}
+
+.sub-nav { background: #111; color: white; font-family: 'Ranchers'; }
+
+.greet h1 {
+    font-size: 3.5rem; color: #3C5AA6;
+    text-shadow: 2px 2px 0px #FFCB05, 4px 4px 0px black;
+}
+
+.type-label {
+    background: #222; color: white; font-family: 'Ranchers';
+    padding: 5px 20px; border-radius: 20px; border: 3px solid black;
+    display: inline-block; margin-bottom: 15px;
+}
+
+.product-card {
+    background: white; border: 3px solid black; border-radius: 12px;
+    width: 160px; padding: 10px; text-align: center;
+}
+.product-card img { width: 110px; height: 110px; object-fit: contain; }
+
+.product-card button {
+    background: #EE1515; color: white; border: 2px solid black;
+    border-radius: 5px; width: 100%; font-family: 'Ranchers';
+}
+
+.cart-container {
+    background: rgba(255, 255, 255, 0.95); border: 4px solid black;
+    border-radius: 20px; position: sticky; top: 20px;
+}
+
+.checkout-btn {
+    background: #EE1515; color: white; font-family: 'Ranchers';
+    border: 3px solid black; border-radius: 8px; font-size: 1.5rem;
+}
+
 .font-ranch { font-family: 'Ranchers'; }
