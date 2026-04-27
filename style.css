@@ -6,24 +6,68 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
-
 header {
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background-color: #EE1515;
-    border-bottom: 5px solid #000;
+    z-index: 2000;
 }
 
 .top-header {
+    background-color: #EE1515;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    height: 120px;
-    background: url('header.png') no-repeat center;
-    background-size: contain;
+    padding: 0 40px;
+    border-bottom: 5px solid #000;
+}
+
+.logo-img {
+    height: 90px;
+    width: auto;
+}
+
+/* Fixes the "tiny blue text" issue */
+.nav-box {
+    background-color: #C64444;
+    color: white !important;
+    text-decoration: none !important;
+    font-family: 'Ranchers', cursive;
+    padding: 10px 20px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #000;
+    font-size: 1.1rem;
+}
+
+.nav-box:hover {
+    background-color: #FFCB05;
+    color: #000 !important;
+}
+
+.sub-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+    border-bottom: 5px solid #000;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 0px #000;
+}
+
+/* Prevents the 'Welcome' text from overlapping */
+.greet {
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .header-left, .header-right {
