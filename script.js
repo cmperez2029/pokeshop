@@ -13,23 +13,22 @@ function removeFromCart(index) {
 function updateCartDisplay() {
   var cartList = document.getElementById("cart-list");
   var totalDisplay = document.getElementById("cart-total");
+  var hiddenOrderInput = document.getElementById("cust_order");
   var total = 0;
   var html = "";
 
   for (var i = 0; i < cart.length; i++) {
     total += cart[i].prod_price;
-    html += "<li>" + cart[i].prod_name + " - ₱" + cart[i].prod_price.toFixed(2);
-    html += " <button onclick='removeFromCart(" + i + ")'>Remove</button></li>";
+    html += "<li class='d-flex justify-content-between align-items-center mb-2'>";
+    html += "<span>" + cart[i].prod_name + " - ₱" + cart[i].prod_price.toLocaleString() + "</span>";
+    html += "<button class='btn btn-sm btn-outline-danger' onclick='removeFromCart(" + i + ")'>&times;</button>";
+    html += "</li>";
   }
 
   cartList.innerHTML = html;
-  totalDisplay.textContent = total.toFixed(2);
-}
-
-function submitOrder() {
-  var name = document.getElementById("cust_name").value;
-  var email = document.getElementById("cust_email").value;
-  var addr = document.getElementById("cust_addr").value;
-  var order = JSON.stringify(cart);
-
+  totalDisplay.textContent = total.toLocaleString(undefined, { minimumFractionDigits: 2 });
+  
+  if (hiddenOrderInput) {
+    hiddenOrderInput.value = JSON.stringify(cart);
+  }
 }
