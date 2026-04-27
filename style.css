@@ -1,23 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
 body {
-    background-color: #78C850;
-    background-image: linear-gradient(to bottom, #87CEEB, #E0F7FA); 
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     overflow-x: hidden;
+    color: #333;
 }
 
 header {
-    background-color: #EE1515; 
-    padding: 20px;
+    background-color: #EE1515;
+    padding: 20px 0;
     border-bottom: 8px solid #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 }
 
 .header-logo {
@@ -34,113 +41,111 @@ nav a {
 }
 
 nav a:hover {
-    color: #FFCB05; /* Pokemon Yellow */
+    color: #FFCB05;
 }
 
 .greet {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px 20px 20px;
 }
 
 .greet h1 {
     font-family: 'Ranchers', cursive;
-    font-size: 4rem;
-    color: #3C5AA6; /* Pokemon Blue */
-    text-shadow: 4px 4px 0px #FFCB05, 6px 6px 0px #333;
+    font-size: 5rem;
+    color: #3C5AA6;
+    text-shadow: 4px 4px 0px #FFCB05, 6px 6px 0px #fff;
 }
 
 h2 {
     font-family: 'Ranchers', cursive;
     color: #fff;
     background: #333;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 50px;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 #wrapper {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 30px;
+    margin-bottom: 80px;
+    border: 3px solid #333;
 }
 
 .product {
     background: white;
     border: 4px solid #333;
     border-radius: 15px;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
-    width: 180px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    width: 200px;
+    transition: transform 0.2s;
 }
 
 .product:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+}
+
+.product img {
+    max-width: 120px;
+    height: 120px;
 }
 
 .prod-name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-top: 10px;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.5rem;
+    margin-top: 15px;
 }
 
 .prod-price {
     color: #2E7D32;
     font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 #cart-section {
     background: white;
     border: 5px solid #333 !important;
     border-radius: 20px;
-    min-width: 350px;
+    min-width: 380px;
     height: fit-content;
     position: sticky;
-    top: 130px;
+    top: 150px;
 }
 
-#cart-section h2, #cart-section h3 {
-    font-family: 'Ranchers', cursive;
+#cart-section h2 {
     background: none;
     color: #EE1515;
     text-align: center;
+    font-size: 2rem;
 }
 
-/* Cloud Animation */
-.cloud {
-    position: absolute;
-    width: 200px;
-    height: 60px;
-    background: #fff;
-    border-radius: 200px;
-    opacity: 0.8;
-    z-index: -1;
-    animation: moveClouds linear infinite;
-}
-
-.cloud:after, .cloud:before {
-    content: '';
-    position: absolute;
-    background: #fff;
-    width: 100px;
+.bottom-poke-deco {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
     height: 80px;
-    top: -40px;
-    left: 10px;
-    border-radius: 100px;
+    background: white;
+    border: 5px solid black;
+    border-radius: 50%;
+    box-shadow: inset 0 -40px 0 0 #EE1515;
+    z-index: 100;
 }
 
-.cloud:after {
-    width: 120px;
-    height: 120px;
-    top: -70px;
-    left: 70px;
-}
-
-@keyframes moveClouds {
-    from { left: -250px; }
-    to { left: 100%; }
+.bottom-poke-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 5px solid black;
+    border-radius: 50%;
 }
