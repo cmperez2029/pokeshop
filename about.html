@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About the Company</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Pokemon Shopping Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="top-header">
+            <div class="header-left">
+                <a href="index.html" class="poke-btn">HOME</a>
+                <a href="about.html" class="poke-btn">ABOUT THE COMPANY</a>
+            </div>
+            <div class="header-center">
+                <img src="Header.png" alt="PokeShop" class="logo-img">
+            </div>
+            <div class="header-right">
+                <a href="checkout.html" class="poke-btn">VIEW CART</a>
+            </div>
+        </div>
+        <nav class="sub-nav">
+            <a href="#">POKEMON</a>
+            <a href="#">ITEMS</a>
+            <a href="#">GEAR</a>
+            <a href="checkout.html">CART</a>
+            <a href="#">BATTLE</a>
+        </nav>
+    </header>
 
-  <header>
-    <div class="top-header">
-      <div class="header-left">
-        <a href="index.html" class="poke-btn">HOME</a>
-        <a href="about.html" class="poke-btn">ABOUT THE COMPANY</a>
-      </div>
-      <div class="header-center">
-        <img src="header.png" alt="PokeShop" class="logo-img">
-      </div>
-      <div class="header-right">
-        <a href="#" class="poke-btn">TRAINER PROFILE</a>
-      </div>
+    <div class="greet">
+        <h1>Welcome To the World of Pokemon!</h1>
     </div>
-  </header>
 
-  <div class="greet"><h1>Project Owners</h1></div>
+    <div id="wrapper" class="d-flex gap-3 px-4">
+        <div id="catalog" class="flex-grow-1">
+            <h2 class="type-label">Water Types</h2>
+            <div class="category d-flex flex-wrap gap-4 mb-5">
+                <div class="product">
+                    <img src="Psyduck.png" alt="Psyduck">
+                    <p class="prod-name">Psyduck</p>
+                    <p class="prod-price">₱8,000.00</p>
+                    <button class="add-btn" onclick="addToCart('Psyduck', 8000)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Squirtle.png" alt="Squirtle">
+                    <p class="prod-name">Squirtle</p>
+                    <p class="prod-price">₱10,000.00</p>
+                    <button class="add-btn" onclick="addToCart('Squirtle', 10000)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Wailmer.png" alt="Wailmer">
+                    <p class="prod-name">Wailmer</p>
+                    <p class="prod-price">₱7,000.00</p>
+                    <button class="add-btn" onclick="addToCart('Wailmer', 7000)">Add to Cart</button>
+                </div>
+            </div>
 
-  <div id="wrapper" class="container mt-5">
-    <div class="owner-box">
-      <div class="row text-center gy-4">
-        
-        <div class="col-md-4">
-          <div class="owner-card">
-            <h3 class="owner-name text-red">Joaquin Vladimir Tan</h3>
-            <hr class="thick-hr">
-            <p><strong>Primary Role:</strong> Website Layout</p>
-          </div>
+            <h2 class="type-label">Electric Types</h2>
+            <div class="category d-flex flex-wrap gap-4 mb-5">
+                <div class="product">
+                    <img src="Pikachu.png" alt="Pikachu">
+                    <p class="prod-name">Pikachu</p>
+                    <p class="prod-price">₱3,150.00</p>
+                    <button class="add-btn" onclick="addToCart('Pikachu', 3150)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Luxray.png" alt="Luxray">
+                    <p class="prod-name">Luxray</p>
+                    <p class="prod-price">₱9,500.00</p>
+                    <button class="add-btn" onclick="addToCart('Luxray', 9500)">Add to Cart</button>
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-4">
-          <div class="owner-card">
-            <h3 class="owner-name text-blue">Cassandra Louise Perez</h3>
-            <hr class="thick-hr">
-            <p><strong>Primary Role:</strong> CSS Styling</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="owner-card">
-            <h3 class="owner-name text-blue">Yuri Cielo Regencia</h3>
-            <hr class="thick-hr">
-            <p><strong>Primary Role:</strong> CSS Styling</p>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
